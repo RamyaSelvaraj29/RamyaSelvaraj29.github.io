@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ramya Selvaraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 72px; align-items: start;
+}
+.about-photo {
+  background: var(--warm); border-radius: 16px;
+  aspect-ratio: 4/5; overflow: hidden;
+  border: 2px solid var(--border);
+  box-shadow: 10px 10px 0 var(--terra-lt);
+  display: flex; align-items: center; justify-content: center;
+}
+.about-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.about-text p {
+  font-family: 'Lora', serif;
+  font-size: 17px; color: var(--brown); line-height: 1.9;
+  margin-bottom: 22px;
+}
+.highlight-cards { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+.hc {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--paper); border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 16px 20px;
+  transition: border-color .2s, transform .15s;
+}
+.hc:hover { border-color: var(--terra); transform: translateX(4px); }
+.hc-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.hc-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+.hc-sub { font-size: 13px; color: var(--dim); line-height: 1.55; }
+
+.values-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 0;
+}
+.val-card {
+  background: var(--paper); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 28px 24px; text-align: center;
+  transition: border-color .2s, transform .15s;
+}
+.val-card:hover { border-color: var(--terra); transform: translateY(-4px); }
+.val-icon { font-size: 36px; margin-bottom: 14px; }
+.val-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 8px;
+}
+.val-desc { font-size: 13px; color: var(--dim); line-height: 1.6; }
+
+.divider-line {
+  border: none; border-top: 1px solid var(--border); margin: 64px 0 0;
+}
+
+@media(max-width:860px){
+  .about-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:560px){
+  .values-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Ramya<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-page="home">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="projects.html" data-page="projects">Projects</a></li>
+    <li><a href="experience.html" data-page="experience">Experience</a></li>
+    <li><a href="skills.html" data-page="skills">Skills</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-hire">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="ph-inner">
+      <span class="ph-label">// About Me</span>
+      <h1 class="ph-title">The Person<br>Behind the Data</h1>
+      <p class="ph-sub">A data professional who believes analysis is only as good as the action it inspires.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="section" style="background:var(--paper);">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <div class="about-photo reveal">
+          <!--
+            TO ADD PHOTO: Replace this div with
+            <img src="../your-photo.jpg" alt="Ramya Selvaraj">
+          -->
+          <div class="photo-placeholder">
+            <div class="avatar-initials">RS</div>
+            <p>Photo coming soon</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-eyebrow reveal">My Story</span>
+          <h2 class="section-heading reveal">Turning Complexity<br>Into Clarity</h2>
+
+          <div class="about-text reveal">
+            <p>
+              I'm Ramya — a Data Analyst and Data Scientist with 2.5+ years of professional experience 
+              in Australia, where I built production-grade data systems, ML models, and analytics 
+              infrastructure for enterprise clients in the automotive industry.
+            </p>
+            <p>
+              My work spans the full data spectrum: from designing and optimizing ETL pipelines 
+              and data models in SQL, to building machine learning classifiers with Python and 
+              Scikit-learn, to creating dashboards and KPI frameworks that non-technical 
+              stakeholders can act on immediately.
+            </p>
+            <p>
+              Since relocating to the Bay Area, I've been deliberately expanding into product 
+              analytics and experimentation — building projects in A/B testing, cohort analysis, 
+              funnel optimization, and product metrics design. I'm targeting roles where data 
+              is a core strategic input, not an afterthought.
+            </p>
+            <p>
+              I hold a Master's degree in Data Science from Deakin University (Australia) and 
+              three Microsoft Azure certifications across data, AI, and cloud fundamentals.
+            </p>
+          </div>
+
+          <div class="highlight-cards">
+            <div class="hc reveal">
+              <div class="hc-icon">🎓</div>
+              <div>
+                <div class="hc-title">Master of Data Science — Deakin University</div>
+                <div class="hc-sub">Graduate-level training in statistical modelling, ML, data engineering, and research methodology.</div>
+              </div>
+            </div>
+            <div class="hc reveal">
+              <div class="hc-icon">🌏</div>
+              <div>
+                <div class="hc-title">2.5 Years Industry Experience — Australia</div>
+                <div class="hc-sub">Professional data work at Pentana Solutions, a global automotive software company operating in 100+ countries.</div>
+              </div>
+            </div>
+            <div class="hc reveal">
+              <div class="hc-icon">☁️</div>
+              <div>
+                <div class="hc-title">3× Microsoft Azure Certified</div>
+                <div class="hc-sub">AZ-900, DP-900, and AI-900 — demonstrating verified cloud, data, and AI fundamentals.</div>
+              </div>
+            </div>
+            <div class="hc reveal">
+              <div class="hc-icon">🤖</div>
+              <div>
+                <div class="hc-title">AI-Augmented Analytics</div>
+                <div class="hc-sub">Hands-on with OpenAI API, GPT-4, and semantic embeddings to build intelligent data products.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="section" style="background:var(--cream);">
+    <div class="section-inner">
+      <span class="section-eyebrow reveal">How I Work</span>
+      <h2 class="section-heading reveal">What I Bring to Every Role</h2>
+      <p class="section-lead reveal">Beyond technical skills — the working principles that make me an effective collaborator.</p>
+
+      <div class="values-grid">
+        <div class="val-card reveal">
+          <div class="val-icon">🎯</div>
+          <div class="val-title">Business-First Thinking</div>
+          <div class="val-desc">Every analysis starts with "What decision does this enable?" I don't ship reports — I ship recommendations.</div>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-icon">🔬</div>
+          <div class="val-title">Rigorous & Reproducible</div>
+          <div class="val-desc">Clean code, documented notebooks, version-controlled work. Findings that others can verify and build on.</div>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-icon">💬</div>
+          <div class="val-title">Clear Communicator</div>
+          <div class="val-desc">Translating complex findings into plain language for engineers, PMs, and executives. Trilingual — English, Tamil, Telugu.</div>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-icon">⚡</div>
+          <div class="val-title">Fast Learner</div>
+          <div class="val-desc">Picked up dbt, Airflow, and the OpenAI API through self-directed projects. I adapt quickly to new stacks and domains.</div>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-icon">🔄</div>
+          <div class="val-title">Full-Stack Data Skills</div>
+          <div class="val-desc">From raw ETL pipelines to ML model deployment to executive dashboards — I operate at every layer of the data stack.</div>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-icon">🤝</div>
+          <div class="val-title">Cross-Functional Partner</div>
+          <div class="val-desc">Experienced collaborating with product, engineering, and ops teams. I don't work in a silo — I work at the intersection.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="contact-section">
+    <div class="contact-inner">
+      <span class="contact-label">Let's connect</span>
+      <h2 class="contact-title" style="font-size:clamp(26px,3.5vw,40px);">Interested in Working Together?</h2>
+      <p class="contact-sub">I'm actively looking for Data Analyst, Data Scientist, and Product Analytics roles in the Bay Area.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-fill">Get In Touch</a>
+        <a href="experience.html" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25);">View Experience →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Ramya Selvaraj · Santa Clara, CA</span>
+  <div class="footer-links">
+    <a href="https://github.com/RamyaSelvaraj29" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/ramya-selvaraj" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>initNav('about');</script>
+</body>
+</html>

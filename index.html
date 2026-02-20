@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramya Selvaraj — Data Analyst & Data Scientist</title>
+<meta name="description" content="Ramya Selvaraj – Data Analyst and Data Scientist with 2.5+ years of experience in analytics, ML, and data pipelines. Based in Bay Area, CA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.available-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(58,90,64,.1); border: 1px solid var(--green-lt);
+  color: var(--green); font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; padding: 7px 16px; border-radius: 20px;
+  margin-bottom: 24px;
+}
+.available-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(.7); }
+}
+.hero-divider {
+  width: 48px; height: 3px; background: var(--terra);
+  margin: 32px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Ramya<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="home">Home</a></li>
+    <li><a href="pages/about.html" data-page="about">About</a></li>
+    <li><a href="pages/projects.html" data-page="projects">Projects</a></li>
+    <li><a href="pages/experience.html" data-page="experience">Experience</a></li>
+    <li><a href="pages/skills.html" data-page="skills">Skills</a></li>
+    <li><a href="pages/contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="pages/contact.html" class="nav-hire">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="available-chip">
+          <div class="available-dot"></div>
+          Open to opportunities · Bay Area, CA
+        </div>
+
+        <div class="hero-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Data Analyst · Data Scientist</span>
+        </div>
+
+        <h1 class="hero-name">Ramya<br>Selvaraj</h1>
+
+        <div class="hero-roles">
+          <span class="role-badge">Data Analyst</span>
+          <span class="role-badge">Data Scientist</span>
+          <span class="role-badge">Product Analytics</span>
+          <span class="role-badge">ML Engineer</span>
+        </div>
+
+        <p class="hero-desc">
+          I turn raw data into decisions that move businesses forward.
+          With 2.5+ years of hands-on experience across analytics, machine learning,
+          and data engineering — I bring both technical depth and business clarity
+          to every problem I work on.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="pages/projects.html" class="btn btn-fill">View My Projects</a>
+          <a href="pages/experience.html" class="btn btn-ghost">My Experience</a>
+          <a href="pages/contact.html" class="btn btn-green">Let's Talk</a>
+        </div>
+
+        <div class="hero-divider"></div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hs-num">2.5+</div>
+            <div class="hs-lbl">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hs-num">6+</div>
+            <div class="hs-lbl">Projects Built</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hs-num">3</div>
+            <div class="hs-lbl">Azure Certifications</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hs-num">30%</div>
+            <div class="hs-lbl">Efficiency Gains Delivered</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo-col">
+        <div class="hero-photo-frame">
+          <!--
+            TO ADD YOUR PHOTO:
+            Replace the div below with: <img src="../your-photo.jpg" alt="Ramya Selvaraj">
+          -->
+          <div class="photo-placeholder">
+            <div class="avatar-initials">RS</div>
+            <p>Photo coming soon</p>
+          </div>
+          <div class="hero-location-tag">📍 Santa Clara, California</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVIGATION CARDS -->
+  <div style="background: var(--cream); padding: 0 0 80px;">
+    <div class="nav-cards">
+
+      <a href="pages/about.html" class="nav-card reveal">
+        <div class="nc-icon">👩‍💻</div>
+        <div class="nc-title">About Me</div>
+        <div class="nc-sub">My story, background, and what drives me as a data professional.</div>
+        <span class="nc-arrow">→</span>
+      </a>
+
+      <a href="pages/projects.html" class="nav-card reveal">
+        <div class="nc-icon">📊</div>
+        <div class="nc-title">Projects</div>
+        <div class="nc-sub">6 end-to-end projects across ML, analytics, pipelines, and product.</div>
+        <span class="nc-arrow">→</span>
+      </a>
+
+      <a href="pages/experience.html" class="nav-card reveal">
+        <div class="nc-icon">💼</div>
+        <div class="nc-title">Experience & Education</div>
+        <div class="nc-sub">Professional history, academic background, and certifications.</div>
+        <span class="nc-arrow">→</span>
+      </a>
+
+      <a href="pages/skills.html" class="nav-card reveal">
+        <div class="nc-icon">⚡</div>
+        <div class="nc-title">Skills & Tools</div>
+        <div class="nc-sub">Full technical stack: SQL, Python, ML, BI, cloud, and more.</div>
+        <span class="nc-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-section">
+    <div class="contact-inner">
+      <span class="contact-label">Ready to collaborate</span>
+      <h2 class="contact-title">Let's Build Something<br>Meaningful Together</h2>
+      <p class="contact-sub">Open to Data Analyst, Data Scientist, and Product Analytics roles in the Bay Area. I ramp up quickly, care about data that leads to action, and love working in collaborative teams.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="pages/contact.html" class="btn btn-fill">Get In Touch</a>
+        <a href="https://github.com/RamyaSelvaraj29" target="_blank" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,.25);">View GitHub</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Ramya Selvaraj · Santa Clara, CA</span>
+  <div class="footer-links">
+    <a href="https://github.com/RamyaSelvaraj29" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/ramya-selvaraj" target="_blank">LinkedIn</a>
+    <a href="pages/contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>initNav('home');</script>
+</body>
+</html>

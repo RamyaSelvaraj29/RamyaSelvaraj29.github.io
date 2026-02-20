@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Ramya Selvaraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.exp-summary {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 60px;
+}
+.es-item {
+  background: var(--paper); padding: 28px 20px; text-align: center;
+}
+.es-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700; color: var(--terra);
+  display: block; line-height: 1; margin-bottom: 6px;
+}
+.es-lbl { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dim); }
+
+.section-divider {
+  display: flex; align-items: center; gap: 16px;
+  margin: 60px 0 40px;
+}
+.sd-line { flex: 1; height: 1px; background: var(--border); }
+.sd-label {
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--dim);
+  white-space: nowrap;
+}
+
+@media(max-width:640px){
+  .exp-summary { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Ramya<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-page="home">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="projects.html" data-page="projects">Projects</a></li>
+    <li><a href="experience.html" data-page="experience">Experience</a></li>
+    <li><a href="skills.html" data-page="skills">Skills</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-hire">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <div class="ph-inner">
+      <span class="ph-label">// Experience & Education</span>
+      <h1 class="ph-title">Where I've Built<br>My Craft</h1>
+      <p class="ph-sub">2.5+ years of professional experience, a Master's in Data Science, and a track record of delivering measurable impact.</p>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--paper);">
+    <div class="section-inner">
+
+      <!-- Summary strip -->
+      <div class="exp-summary reveal">
+        <div class="es-item">
+          <span class="es-num">2.5+</span>
+          <span class="es-lbl">Years Professional Experience</span>
+        </div>
+        <div class="es-item">
+          <span class="es-num">30%</span>
+          <span class="es-lbl">Manual Work Reduced via Automation</span>
+        </div>
+        <div class="es-item">
+          <span class="es-num">25%</span>
+          <span class="es-lbl">Data Latency Improvement</span>
+        </div>
+        <div class="es-item">
+          <span class="es-num">100+</span>
+          <span class="es-lbl">Countries — Pentana's Global Reach</span>
+        </div>
+      </div>
+
+      <!-- WORK EXPERIENCE -->
+      <span class="section-eyebrow reveal">Work History</span>
+      <h2 class="section-heading reveal">Professional Experience</h2>
+
+      <div class="timeline reveal">
+
+        <div class="tl-item">
+          <div class="tl-dot">💼</div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <span class="tl-role">Data Analyst</span>
+              <span class="tl-period">Jan 2022 – May 2024</span>
+            </div>
+            <div class="tl-company">Pentana Solutions</div>
+            <div class="tl-location">📍 Melbourne, Victoria, Australia · Full-Time · 2 years 5 months</div>
+            <p style="font-size:14px;color:var(--dim);margin-bottom:20px;font-family:'Lora',serif;font-style:italic;">
+              Pentana Solutions is a global automotive software company serving 10,000+ dealerships across 100+ countries. The data team supported OEM integrations and dealer analytics at enterprise scale.
+            </p>
+
+            <div class="tl-achievements">
+              <div class="ta-item">
+                <div class="ta-num">25%</div>
+                <div class="ta-lbl">Latency Reduced</div>
+              </div>
+              <div class="ta-item">
+                <div class="ta-num">30%</div>
+                <div class="ta-lbl">Manual QA Reduced</div>
+              </div>
+              <div class="ta-item">
+                <div class="ta-num">10%</div>
+                <div class="ta-lbl">Query Perf Improved</div>
+              </div>
+            </div>
+
+            <ul class="tl-bullets">
+              <li>
+                <strong>Designed and automated ETL pipelines</strong> transforming high-volume OEM vehicle master, parts, and accessory data into unified dealer-ready schemas — reducing data latency by <strong>25%</strong> and eliminating manual processing bottlenecks.
+              </li>
+              <li>
+                <strong>Performed extensive data profiling</strong> and implemented transformation and validation rules across multiple OEM data sources, enhancing consistency and significantly reducing pricing and accessory data errors in downstream dealer systems.
+              </li>
+              <li>
+                <strong>Built a statistical anomaly detection model</strong> using Python (Pandas, Scikit-learn) that automatically flags irregular values in incoming data feeds — improving data accuracy and reducing manual quality check effort by <strong>30%</strong>.
+              </li>
+              <li>
+                <strong>Integrated KPI monitoring dashboards</strong> to track data quality alerts and pipeline health metrics in real time, enabling proactive issue detection and improving the reliability of dealer-ready datasets delivered to clients.
+              </li>
+              <li>
+                <strong>Optimized SQL data models</strong>, query structures, aggregations, and indexing strategies — achieving a <strong>10% improvement</strong> in query performance across high-volume reporting workloads.
+              </li>
+              <li>
+                <strong>Collaborated with cross-functional stakeholders</strong> across product, engineering, and operations to define KPI metrics, communicate data quality findings, and align on data standards across OEM integration projects.
+              </li>
+              <li>
+                <strong>Documented data transformation logic, pipeline architecture, and validation rules</strong> to create maintainable, handoff-ready data infrastructure that could be extended by the broader team.
+              </li>
+            </ul>
+
+            <div class="tl-tools">
+              <span class="tl-tool">SQL</span>
+              <span class="tl-tool">Python</span>
+              <span class="tl-tool">Pandas</span>
+              <span class="tl-tool">Scikit-learn</span>
+              <span class="tl-tool">ETL Pipelines</span>
+              <span class="tl-tool">Data Modelling</span>
+              <span class="tl-tool">KPI Dashboards</span>
+              <span class="tl-tool">Data Quality</span>
+              <span class="tl-tool">Anomaly Detection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Independent Projects / Self-Directed -->
+        <div class="tl-item">
+          <div class="tl-dot">🚀</div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <span class="tl-role">Independent Data Projects</span>
+              <span class="tl-period">Jun 2024 – Present</span>
+            </div>
+            <div class="tl-company">Self-Directed · Bay Area Transition Period</div>
+            <div class="tl-location">📍 Santa Clara, California</div>
+            <p style="font-size:14px;color:var(--dim);margin-bottom:20px;font-family:'Lora',serif;font-style:italic;">
+              Following relocation to the Bay Area, actively building a product analytics and ML portfolio targeting Data Analyst and Data Scientist roles at Bay Area tech companies.
+            </p>
+            <ul class="tl-bullets">
+              <li><strong>Built an AI-powered product recommendation system</strong> using OpenAI embeddings, semantic search, and GPT-4 — served via a FastAPI REST API.</li>
+              <li><strong>Developed a stroke risk ML classification model</strong> with SHAP explainability, SMOTE for class imbalance, and model comparison across three algorithms.</li>
+              <li><strong>Designed a full A/B testing and experimentation framework</strong> including sample size calculation, significance testing, and business recommendation output.</li>
+              <li><strong>Building product analytics projects</strong> in cohort retention analysis, funnel optimization (BigQuery + dbt), and product metrics dashboard design.</li>
+            </ul>
+            <div class="tl-tools">
+              <span class="tl-tool">OpenAI API</span>
+              <span class="tl-tool">FastAPI</span>
+              <span class="tl-tool">BigQuery</span>
+              <span class="tl-tool">dbt</span>
+              <span class="tl-tool">Airflow</span>
+              <span class="tl-tool">Tableau</span>
+              <span class="tl-tool">A/B Testing</span>
+              <span class="tl-tool">Product Analytics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section-divider reveal">
+        <div class="sd-line"></div>
+        <span class="sd-label">Education</span>
+        <div class="sd-line"></div>
+      </div>
+
+      <span class="section-eyebrow reveal">Academic Background</span>
+      <h2 class="section-heading reveal">Education</h2>
+
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-degree">Master of Data Science</div>
+          <div class="edu-school">Deakin University</div>
+          <div class="edu-period">January 2020 – November 2021 · Melbourne, Australia</div>
+          <ul class="edu-highlights">
+            <li>Advanced machine learning, statistical modelling, and data engineering</li>
+            <li>Research methods, data ethics, and scientific communication</li>
+            <li>Hands-on coursework in Python, R, SQL, and data visualization</li>
+            <li>Thesis and project-based learning with real datasets</li>
+          </ul>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">💻</div>
+          <div class="edu-degree">Bachelor of Information Technology</div>
+          <div class="edu-school">Coimbatore Institute of Technology</div>
+          <div class="edu-period">2016 – 2019 · Coimbatore, India</div>
+          <ul class="edu-highlights">
+            <li>Computer science fundamentals: algorithms, data structures, databases</li>
+            <li>Systems design and software engineering principles</li>
+            <li>Programming in Java, C++, and early Python exposure</li>
+            <li>Database design and management with SQL</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section-divider reveal">
+        <div class="sd-line"></div>
+        <span class="sd-label">Certifications</span>
+        <div class="sd-line"></div>
+      </div>
+
+      <span class="section-eyebrow reveal">Verified Credentials</span>
+      <h2 class="section-heading reveal">Certifications</h2>
+
+      <div class="cert-grid reveal">
+        <div class="cert-card">
+          <div class="cert-badge-wrap">☁️</div>
+          <div>
+            <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+            <div class="cert-issuer">Microsoft · AZ-900 · Credential ID verified</div>
+            <span class="cert-chip cert-chip-azure">Azure Cloud</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-wrap">📊</div>
+          <div>
+            <div class="cert-name">Microsoft Certified: Azure Data Fundamentals</div>
+            <div class="cert-issuer">Microsoft · DP-900 · Credential ID verified</div>
+            <span class="cert-chip cert-chip-azure">Data Services</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge-wrap">🤖</div>
+          <div>
+            <div class="cert-name">Microsoft Certified: Azure AI Fundamentals</div>
+            <div class="cert-issuer">Microsoft · AI-900 · Credential ID verified</div>
+            <span class="cert-chip cert-chip-azure">AI & ML</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-inner">
+      <span class="contact-label">Ready to hire?</span>
+      <h2 class="contact-title" style="font-size:clamp(26px,3.5vw,42px);">Let's Talk About Your Team's Needs</h2>
+      <p class="contact-sub">2.5 years of professional experience, a Master's in Data Science, and 6+ projects that demonstrate what I can build for you.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-fill">Contact Me</a>
+        <a href="projects.html" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25);">See My Projects →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Ramya Selvaraj · Santa Clara, CA</span>
+  <div class="footer-links">
+    <a href="https://github.com/RamyaSelvaraj29" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/ramya-selvaraj" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>initNav('experience');</script>
+</body>
+</html>

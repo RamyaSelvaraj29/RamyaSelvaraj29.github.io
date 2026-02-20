@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Ramya Selvaraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.proficiency-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.proficiency-row:last-child { border-bottom: none; }
+.pr-label { font-size: 13px; font-weight: 500; color: var(--ink); min-width: 120px; }
+.pr-bar { flex: 1; height: 6px; background: var(--warm); border-radius: 3px; overflow: hidden; }
+.pr-fill { height: 100%; border-radius: 3px; background: var(--terra); transition: width 1s ease; }
+.pr-pct { font-size: 12px; color: var(--dim); min-width: 36px; text-align: right; }
+
+.role-fit-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 0;
+}
+.rf-card {
+  background: var(--paper); border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 28px 24px;
+  transition: border-color .2s, transform .15s;
+}
+.rf-card:hover { border-color: var(--terra); transform: translateY(-4px); }
+.rf-icon { font-size: 32px; margin-bottom: 14px; }
+.rf-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 12px;
+}
+.rf-skills { list-style: none; }
+.rf-skills li {
+  font-size: 13px; color: var(--brown); padding: 5px 0 5px 16px;
+  border-bottom: 1px solid var(--border); position: relative;
+}
+.rf-skills li:last-child { border-bottom: none; }
+.rf-skills li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-size: 11px; top: 7px; }
+
+@media(max-width:720px){
+  .role-fit-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Ramya<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-page="home">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="projects.html" data-page="projects">Projects</a></li>
+    <li><a href="experience.html" data-page="experience">Experience</a></li>
+    <li><a href="skills.html" data-page="skills">Skills</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-hire">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <div class="ph-inner">
+      <span class="ph-label">// Skills & Tools</span>
+      <h1 class="ph-title">The Full Technical<br>Stack</h1>
+      <p class="ph-sub">From raw SQL queries to production ML pipelines — I operate across the entire data stack.</p>
+    </div>
+  </div>
+
+  <!-- ROLE FIT -->
+  <div class="section" style="background:var(--paper);">
+    <div class="section-inner">
+      <span class="section-eyebrow reveal">Role Alignment</span>
+      <h2 class="section-heading reveal">What I Can Do For Your Team</h2>
+      <p class="section-lead reveal">My skills span three closely related roles — here's what I bring to each.</p>
+
+      <div class="role-fit-grid">
+        <div class="rf-card reveal">
+          <div class="rf-icon">📊</div>
+          <div class="rf-title">Data Analyst</div>
+          <ul class="rf-skills">
+            <li>SQL queries and data modelling</li>
+            <li>Dashboard and BI report building</li>
+            <li>KPI definition and metric design</li>
+            <li>Data cleaning and validation</li>
+            <li>Statistical analysis and hypothesis testing</li>
+            <li>Stakeholder reporting and storytelling</li>
+            <li>ETL pipeline management</li>
+          </ul>
+        </div>
+        <div class="rf-card reveal">
+          <div class="rf-icon">🤖</div>
+          <div class="rf-title">Data Scientist</div>
+          <ul class="rf-skills">
+            <li>ML model building and evaluation</li>
+            <li>Feature engineering and selection</li>
+            <li>Classification, regression, clustering</li>
+            <li>Model explainability (SHAP)</li>
+            <li>Imbalanced data handling (SMOTE)</li>
+            <li>Anomaly detection systems</li>
+            <li>LLM integration and semantic search</li>
+          </ul>
+        </div>
+        <div class="rf-card reveal">
+          <div class="rf-icon">🎯</div>
+          <div class="rf-title">Product Data Scientist</div>
+          <ul class="rf-skills">
+            <li>A/B testing and experimentation</li>
+            <li>Funnel and conversion analysis</li>
+            <li>Cohort and retention analysis</li>
+            <li>User behaviour analysis</li>
+            <li>Product metrics frameworks</li>
+            <li>North Star metric design</li>
+            <li>Insight communication to PMs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILL GROUPS -->
+  <div class="section" style="background:var(--cream);">
+    <div class="section-inner">
+      <span class="section-eyebrow reveal">Technical Skills</span>
+      <h2 class="section-heading reveal">Tools & Technologies</h2>
+      <p class="section-lead reveal">Organized by domain — hover any pill to see it highlighted.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">🗄️</span>
+            <span class="sg-title">Data & Query</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">SQL</span>
+            <span class="sg-pill strong">BigQuery</span>
+            <span class="sg-pill strong">MySQL</span>
+            <span class="sg-pill strong">dbt</span>
+            <span class="sg-pill">Data Modelling</span>
+            <span class="sg-pill">ETL Pipelines</span>
+            <span class="sg-pill">Data Profiling</span>
+            <span class="sg-pill">Schema Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">🐍</span>
+            <span class="sg-title">Python Ecosystem</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">Python</span>
+            <span class="sg-pill strong">Pandas</span>
+            <span class="sg-pill strong">NumPy</span>
+            <span class="sg-pill">SciPy</span>
+            <span class="sg-pill">Matplotlib</span>
+            <span class="sg-pill">Seaborn</span>
+            <span class="sg-pill">FastAPI</span>
+            <span class="sg-pill">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">🤖</span>
+            <span class="sg-title">Machine Learning</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">Scikit-learn</span>
+            <span class="sg-pill strong">Classification</span>
+            <span class="sg-pill">Regression</span>
+            <span class="sg-pill">Clustering</span>
+            <span class="sg-pill strong">Feature Engineering</span>
+            <span class="sg-pill strong">SHAP</span>
+            <span class="sg-pill">SMOTE</span>
+            <span class="sg-pill">Anomaly Detection</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">🤖</span>
+            <span class="sg-title">AI / LLM</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">OpenAI API</span>
+            <span class="sg-pill strong">GPT-4</span>
+            <span class="sg-pill strong">Embeddings</span>
+            <span class="sg-pill">Semantic Search</span>
+            <span class="sg-pill">Cosine Similarity</span>
+            <span class="sg-pill">Prompt Engineering</span>
+            <span class="sg-pill">LLM Applications</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">📊</span>
+            <span class="sg-title">Analytics & BI</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">Tableau</span>
+            <span class="sg-pill strong">Looker / Looker Studio</span>
+            <span class="sg-pill strong">A/B Testing</span>
+            <span class="sg-pill strong">Product Analytics</span>
+            <span class="sg-pill">Funnel Analysis</span>
+            <span class="sg-pill">Cohort Analysis</span>
+            <span class="sg-pill">Statistical Testing</span>
+            <span class="sg-pill">KPI Frameworks</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-head">
+            <span class="sg-icon">⚙️</span>
+            <span class="sg-title">Engineering & Cloud</span>
+          </div>
+          <div class="sg-pills">
+            <span class="sg-pill strong">Apache Airflow</span>
+            <span class="sg-pill strong">Microsoft Azure</span>
+            <span class="sg-pill">Azure Data Factory</span>
+            <span class="sg-pill">Git / GitHub</span>
+            <span class="sg-pill">Data Quality Frameworks</span>
+            <span class="sg-pill">Pipeline Monitoring</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFICIENCY -->
+  <div class="section" style="background:var(--paper);">
+    <div class="section-inner">
+      <span class="section-eyebrow reveal">Depth of Knowledge</span>
+      <h2 class="section-heading reveal">Core Tool Proficiency</h2>
+      <p class="section-lead reveal">Self-assessed based on professional use and project work.</p>
+
+      <div style="max-width:680px;" class="reveal">
+        <div class="proficiency-row">
+          <span class="pr-label">SQL</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:92%"></div></div>
+          <span class="pr-pct">Expert</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">Python</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:88%"></div></div>
+          <span class="pr-pct">Advanced</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">Tableau</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:82%"></div></div>
+          <span class="pr-pct">Advanced</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">Scikit-learn</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:80%"></div></div>
+          <span class="pr-pct">Advanced</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">BigQuery</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:78%"></div></div>
+          <span class="pr-pct">Proficient</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">dbt</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:72%"></div></div>
+          <span class="pr-pct">Proficient</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">Airflow</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:70%"></div></div>
+          <span class="pr-pct">Proficient</span>
+        </div>
+        <div class="proficiency-row">
+          <span class="pr-label">OpenAI API</span>
+          <div class="pr-bar"><div class="pr-fill" style="width:68%"></div></div>
+          <span class="pr-pct">Proficient</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-inner">
+      <span class="contact-label">See it in action</span>
+      <h2 class="contact-title" style="font-size:clamp(26px,3.5vw,42px);">Skills Are Proven in Projects</h2>
+      <p class="contact-sub">Every tool listed here has been applied in a real project. See the work on the Projects page.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="projects.html" class="btn btn-fill">View Projects</a>
+        <a href="contact.html" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25);">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Ramya Selvaraj · Santa Clara, CA</span>
+  <div class="footer-links">
+    <a href="https://github.com/RamyaSelvaraj29" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/ramya-selvaraj" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>initNav('skills');</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ramya Selvaraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.filter-bar {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 8px 18px; border-radius: 20px; cursor: pointer;
+  background: var(--paper); border: 1.5px solid var(--border);
+  color: var(--dim); transition: all .2s; font-family: 'DM Sans', sans-serif;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--terra); color: #fff; border-color: var(--terra);
+}
+.proj-card.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Ramya<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-page="home">Home</a></li>
+    <li><a href="about.html" data-page="about">About</a></li>
+    <li><a href="projects.html" data-page="projects">Projects</a></li>
+    <li><a href="experience.html" data-page="experience">Experience</a></li>
+    <li><a href="skills.html" data-page="skills">Skills</a></li>
+    <li><a href="contact.html" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-hire">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <div class="ph-inner">
+      <span class="ph-label">// Projects</span>
+      <h1 class="ph-title">Work That Answers<br>Real Questions</h1>
+      <p class="ph-sub">Every project starts with a business problem and ends with a recommendation — not just an analysis.</p>
+    </div>
+  </div>
+
+  <div class="section" style="background: var(--cream);">
+    <div class="section-inner">
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('ml', this)">Machine Learning</button>
+        <button class="filter-btn" onclick="filterProjects('analytics', this)">Analytics</button>
+        <button class="filter-btn" onclick="filterProjects('engineering', this)">Data Engineering</button>
+        <button class="filter-btn" onclick="filterProjects('product', this)">Product Analytics</button>
+        <button class="filter-btn" onclick="filterProjects('ai', this)">AI / LLM</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: A/B Testing -->
+        <div class="proj-card reveal" data-cats="analytics product">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #E8C4B0 0%, #F7EDE5 100%);">
+            🧪
+            <span class="proj-thumb-label">Statistics</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(184,92,56,.1);color:var(--terra);">A/B Testing</span>
+              <span class="proj-cat" style="background:rgba(58,90,64,.1);color:var(--green);">Statistics</span>
+              <span class="proj-cat" style="background:rgba(107,76,42,.1);color:var(--brown);">Product Analytics</span>
+            </div>
+            <h3 class="proj-title">A/B Test Analysis & Experimentation Framework</h3>
+            <p class="proj-desc">Designed and executed a complete A/B testing framework — from hypothesis formation, sample size calculation, and test design to statistical significance testing, confidence intervals, and final business recommendation. Mirrors the exact workflow used at companies like Airbnb, Stripe, and DoorDash.</p>
+            <div class="proj-impact">"Should we ship this feature? The data says yes — and here's exactly why you can trust it."</div>
+            <div class="proj-metrics">
+              <div class="pm-item"><div class="pm-num">95%</div><div class="pm-lbl">Confidence</div></div>
+              <div class="pm-item"><div class="pm-num">2</div><div class="pm-lbl">Hypotheses Tested</div></div>
+              <div class="pm-item"><div class="pm-num">+12%</div><div class="pm-lbl">Lift Detected</div></div>
+            </div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">SciPy</span>
+              <span class="proj-tag">Matplotlib</span>
+              <span class="proj-tag">Jupyter</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29" target="_blank" class="pl pl-fill">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Stroke Risk ML -->
+        <div class="proj-card reveal" data-cats="ml">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #D4E6D8 0%, #EBF5F0 100%);">
+            🧠
+            <span class="proj-thumb-label">Machine Learning</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(58,90,64,.1);color:var(--green);">Classification</span>
+              <span class="proj-cat" style="background:rgba(184,92,56,.1);color:var(--terra);">Explainable AI</span>
+              <span class="proj-cat" style="background:rgba(27,79,138,.1);color:#1B4F8A;">Healthcare</span>
+            </div>
+            <h3 class="proj-title">Stroke Risk Prediction Model</h3>
+            <p class="proj-desc">Built a production-ready ML classification pipeline predicting patient stroke risk from clinical and demographic data. Tackled class imbalance with SMOTE, compared Random Forest vs Gradient Boosting vs Logistic Regression, and applied SHAP explainability to surface the key clinical risk drivers — making the model interpretable for medical stakeholders.</p>
+            <div class="proj-impact">"Which patients are at risk before a stroke occurs? Our model answers that — transparently and accurately."</div>
+            <div class="proj-metrics">
+              <div class="pm-item"><div class="pm-num">87%</div><div class="pm-lbl">Precision</div></div>
+              <div class="pm-item"><div class="pm-num">3</div><div class="pm-lbl">Models Compared</div></div>
+              <div class="pm-item"><div class="pm-num">SHAP</div><div class="pm-lbl">Explainability</div></div>
+            </div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Scikit-learn</span>
+              <span class="proj-tag">SHAP</span>
+              <span class="proj-tag">SMOTE</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">Matplotlib</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29/stroke-risk-analysis-model" target="_blank" class="pl pl-fill">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Amazon Recommendation -->
+        <div class="proj-card reveal" data-cats="ai ml">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #EDE5D8 0%, #F7F3EC 100%);">
+            🛍️
+            <span class="proj-thumb-label">AI / LLM</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(107,63,160,.1);color:#6B3FA0;">LLM / AI</span>
+              <span class="proj-cat" style="background:rgba(27,79,138,.1);color:#1B4F8A;">Semantic Search</span>
+              <span class="proj-cat" style="background:rgba(58,90,64,.1);color:var(--green);">Product</span>
+            </div>
+            <h3 class="proj-title">AI-Powered Product Recommendation System</h3>
+            <p class="proj-desc">Solved the product-discovery inefficiency problem in large retail catalogs (50K+ items) by building a semantic search and recommendation engine using OpenAI embeddings, cosine similarity ranking, and GPT-4 powered explanation generation — served via a FastAPI backend.</p>
+            <div class="proj-impact">"Users find the right product in seconds. Recommendations are explained in natural language — not just 'you might also like.'"</div>
+            <div class="proj-metrics">
+              <div class="pm-item"><div class="pm-num">50K+</div><div class="pm-lbl">Products Indexed</div></div>
+              <div class="pm-item"><div class="pm-num">GPT-4</div><div class="pm-lbl">LLM Engine</div></div>
+              <div class="pm-item"><div class="pm-num">API</div><div class="pm-lbl">FastAPI Backend</div></div>
+            </div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">OpenAI API</span>
+              <span class="proj-tag">FastAPI</span>
+              <span class="proj-tag">Embeddings</span>
+              <span class="proj-tag">Cosine Similarity</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29/AI-powered-amazon-product-recommendation-system" target="_blank" class="pl pl-fill">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: ETL Pipeline -->
+        <div class="proj-card reveal" data-cats="engineering">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #C5D5E8 0%, #EBF0F8 100%);">
+            🔄
+            <span class="proj-thumb-label">Data Engineering</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(27,79,138,.1);color:#1B4F8A;">ETL / Pipelines</span>
+              <span class="proj-cat" style="background:rgba(58,90,64,.1);color:var(--green);">Orchestration</span>
+              <span class="proj-cat" style="background:rgba(107,76,42,.1);color:var(--brown);">Retail Analytics</span>
+            </div>
+            <h3 class="proj-title">Automated ETL Pipeline — Retail Transaction Analytics</h3>
+            <p class="proj-desc">Automated the end-to-end transformation of inconsistent, messy retail transaction files into clean, analytics-ready MySQL tables. Used Apache Airflow for scheduling and orchestration, Python for transformation logic, and built in data quality checks at every stage. Eliminated 100% of manual prep work.</p>
+            <div class="proj-impact">"4 hours of weekly manual data prep replaced by a scheduled pipeline that runs while the team sleeps."</div>
+            <div class="proj-metrics">
+              <div class="pm-item"><div class="pm-num">100%</div><div class="pm-lbl">Automation</div></div>
+              <div class="pm-item"><div class="pm-num">Daily</div><div class="pm-lbl">Schedule</div></div>
+              <div class="pm-item"><div class="pm-num">0</div><div class="pm-lbl">Manual Steps</div></div>
+            </div>
+            <div class="proj-tags">
+              <span class="proj-tag">Apache Airflow</span>
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">Data Quality</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29/ETL-Pipeline-Using-Airflow-Python-MySQL" target="_blank" class="pl pl-fill">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: Cohort Analysis — Coming Soon -->
+        <div class="proj-card reveal" data-cats="analytics product">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #D4E6D8 0%, #EBF5F0 100%); opacity:.85;">
+            📊
+            <span class="proj-thumb-label">In Progress</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(58,90,64,.1);color:var(--green);">Cohort Analysis</span>
+              <span class="proj-cat" style="background:rgba(184,92,56,.1);color:var(--terra);">Retention</span>
+              <span class="proj-cat" style="background:rgba(107,76,42,.1);color:var(--brown);">In Progress</span>
+            </div>
+            <h3 class="proj-title">User Retention & Cohort Analysis</h3>
+            <p class="proj-desc">Analyzing 9M+ e-commerce user events to build monthly cohort retention tables, RFM churn-risk segmentation, and a business recommendation framed for a Head of Product. Uses real behavioral data from a multi-category store.</p>
+            <div class="proj-impact">"What % of users from last month are still active today — and what does the data say we should do about it?"</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">SQL</span>
+              <span class="proj-tag">Tableau</span>
+              <span class="proj-tag">RFM Scoring</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29" target="_blank" class="pl pl-fill">Follow on GitHub</a>
+              <span style="font-size:11px;color:var(--dim);align-self:center;padding-left:4px;">Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 6: Funnel Analysis — Coming Soon -->
+        <div class="proj-card reveal" data-cats="analytics product engineering">
+          <div class="proj-thumb" style="background: linear-gradient(135deg, #E8C4B0 0%, #FDF0EB 100%); opacity:.85;">
+            🔍
+            <span class="proj-thumb-label">In Progress</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cats">
+              <span class="proj-cat" style="background:rgba(184,92,56,.1);color:var(--terra);">Funnel Analysis</span>
+              <span class="proj-cat" style="background:rgba(27,79,138,.1);color:#1B4F8A;">BigQuery</span>
+              <span class="proj-cat" style="background:rgba(107,76,42,.1);color:var(--brown);">In Progress</span>
+            </div>
+            <h3 class="proj-title">Product Funnel & Conversion Analysis</h3>
+            <p class="proj-desc">Using Google's public BigQuery dataset (Google Merchandise Store) to model a 5-step purchase funnel, identify the biggest conversion drop-off, segment by device and traffic source, and recommend product improvements with estimated revenue impact. Includes dbt modeling.</p>
+            <div class="proj-impact">"Mobile users convert at 4× less than desktop — here's what the product team should test first."</div>
+            <div class="proj-tags">
+              <span class="proj-tag">BigQuery</span>
+              <span class="proj-tag">dbt</span>
+              <span class="proj-tag">SQL</span>
+              <span class="proj-tag">Looker Studio</span>
+              <span class="proj-tag">Python</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/RamyaSelvaraj29" target="_blank" class="pl pl-fill">Follow on GitHub</a>
+              <span style="font-size:11px;color:var(--dim);align-self:center;padding-left:4px;">Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-inner">
+      <span class="contact-label">Interested in my work?</span>
+      <h2 class="contact-title" style="font-size:clamp(26px,3.5vw,42px);">Let's Build Something Together</h2>
+      <p class="contact-sub">Open to DA, DS, and Product Analytics roles. I bring projects like these to your team every day.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-fill">Get In Touch</a>
+        <a href="https://github.com/RamyaSelvaraj29" target="_blank" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25);">View All on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Ramya Selvaraj · Santa Clara, CA</span>
+  <div class="footer-links">
+    <a href="https://github.com/RamyaSelvaraj29" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/ramya-selvaraj" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+initNav('projects');
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.proj-card').forEach(card => {
+    if (cat === 'all') {
+      card.classList.remove('hidden');
+    } else {
+      const cats = card.dataset.cats || '';
+      cat.split(' ').some(c => cats.includes(c))
+        ? card.classList.remove('hidden')
+        : card.classList.add('hidden');
+    }
+  });
+}
+</script>
+</body>
+</html>
